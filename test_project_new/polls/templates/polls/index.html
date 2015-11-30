@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+<!--{% load crispy_forms_tags %}-->
+{% load staticfiles %}
+
+{% block content %}
+<p style="text-align:center; padding-bottom:50px;padding-top:50px">
+	<img src="{% static 'img/vcollege.jpg'%}"><br></p>
+{% if latest_college_list %}
+    
+    {% for college in latest_college_list %}
+       <p style="text-align: center"><font size="6" color="#000"><a href="/polls/{{ college.id }}/">{{ college.college_text }}</a></font></p>
+    {% endfor %}
+    
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+{% endblock %}

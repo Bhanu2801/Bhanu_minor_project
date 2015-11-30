@@ -1,0 +1,75 @@
+*{padding:0; margin:0;font-family: arial}
+/*html{min-width:1280px; overflow: hidden;}
+/*@font-face {
+     font-family: myFirstFont;
+     src: url(sansation_light.woff);
+ }*/
+.roww{
+  float: left;
+  display: inline;
+  margin-left: 2%;
+  margin-right:3%;
+}
+.roww1{
+  float: left;
+  display: inline;
+  margin-left: 27%;
+  margin-right:3%;
+}
+
+
+.buttons{
+  background-color: #ffffff;
+  border: 1px solid #DCDCDC;
+  height: 40px;
+  width: 150px;
+}
+#more{
+	background-color: #000;
+		height: 300px;
+		text-align: center;
+}
+#header{
+	height:100vh;
+}
+#header > img{
+	width: 100%;
+	height:100vh;
+	position:fixed;
+	z-index: 1;
+}
+#content{
+	height:100vh;
+	border: solid red;
+	z-index: 10;
+	position: relative;
+	background-color: #fff;
+}/*
+#p1{
+	text-align:center;
+	padding-top: 50px;
+	font-family: zzzz;
+	padding-left: 300px;
+	padding-right: 300px;
+	
+}
+#p2{
+	padding-left: 900px;
+	
+}
+.abc{
+	padding-top: 30px;
+	padding-bottom:50px;
+}
+.roww{
+  float: left;
+  display: inline;
+  margin-left: 2%;
+  margin-right:3%;
+}
+.roww1{
+  float: left;
+  display: inline;
+  margin-left: 27%;
+  margin-right:3%;
+}*/

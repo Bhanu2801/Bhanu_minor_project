@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<p style="text-align:center;padding-top:50px"><img src="{% static 'img/details.jpg'%}"></p>
+<p style="text-align:center;padding-left:720px"><h1>{{college.college_text}}</h1>
+
+<h1>{{avg}}</h1>
+<ul>
+{% for rating in college.rating_set.all %}
+	<li>{{rating.views}}</li>
+	
+{% endfor %}
+</ul>
+</p>
+{% endblock %}
+<!--<h1>{{college.college_text}}</h1>
+<ul>
+{% for rating in college.rating_set.all %}
+	<li>{{rating.views}}</li>
+	
+	
+
+		
+{% endfor %}
+</ul>

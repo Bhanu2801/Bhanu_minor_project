@@ -1,0 +1,54 @@
+#panel-button1 a:hover {
+
+  background-color: red;
+
+}
+
+.roww{
+  float: left;
+  display: inline;
+  margin-left: 2%;
+  margin-right:3%;
+}
+.roww1{
+  float: left;
+  display: inline;
+  margin-left: 27%;
+  margin-right:3%;
+}
+
+
+.buttons{
+  background-color: #ffffff;
+  border: 1px solid #DCDCDC;
+  height: 40px;
+  width: 150px;
+}
+body, div,h1,h2,p{
+  margin: 0; padding: 0; border: 0;
+}
+body{
+  text-align: center;
+}
+header{
+ /* height: 100px;*/
+  width: 100%;
+ /* z-index: 10;*/
+  position: fixed;
+}
+#banner {
+  /*background-color: #ffffff;
+  background-image: url("{% static 'img/college1.png'%}");
+  background-size: cover;*/
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  /*top:100px;*/
+}
+
+#content {
+  width: 100%;
+  position: relative;
+  /*top:400px;*/
+
+}

@@ -1,0 +1,52 @@
+
+{% load staticfiles %}
+
+<html>
+
+<head>
+	<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+	
+	<title></title>
+
+</head>
+<body>
+<form name="frmone" action="" id="places-form">
+	Place:<input type="text" name="plc" id="plc1">
+	<button type="submit" name="submit1">Submit</button>
+</form>
+
+<script type="text/javascript">
+	// var frm=document.getElementById("places-form");
+	// console.log(frm);
+	$('#places-form').on('submit', function(ev){
+		ev.preventDefault();
+	// submit.onclick = function(myobj2){
+	var myobj2;
+	var mobj=document.getElementById("plc1").value;
+	var mobj1=mobj.split(' ');
+	var mobj2=mobj1.join('+');
+	var myobj="https://maps.googleapis.com/maps/api/place/textsearch/json?query= &key=AIzaSyCNwSOHuuQiOVjcNyG7MEl-6uClCO-mUdo";
+	var myobj1=myobj.split(' ');
+	myobj2=myobj1[0] + mobj2 + myobj1[1];
+	//window.open(myobj2);
+ 	//console.log(data);  
+    var lat = 100;
+    var lon = 100;
+	$.ajax({
+		url: myobj2,
+		method: 'GET',
+		success: function(data) {
+	    	// alert('Success!');
+    		var lat=data.results[0].geometry.location.lat;
+		    var lon=data.results[0].geometry.location.lng;
+		    var frmStr = '<form name="frmone" method="POST" action="/map/">' +
+		    				'<input type="number" name="lat" value="' + lat + '">' +
+		    				'<input type="number" name="lon" value="' + lon + '">';
+		    $(frmStr).submit();
+		}
+	});
+	});
+// }
+	</script>
+</body>
+</html>

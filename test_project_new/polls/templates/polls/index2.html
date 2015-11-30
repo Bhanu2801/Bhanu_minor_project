@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<p style="text-align:center;padding-top:50px"><img src="{% static 'img/vcollege.jpg'%}"></p>
+{% if latest_college_list %}
+    {% for college in latest_college_list %}
+    <p style="text-align:center; text-decoration:none"><font size="8" color="#480000">
+        <a href="/polls/{{ college.id }}/comments">{{ college.college_text }}</a>
+    </font></p><br>
+    {% endfor %}
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,189 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js demo-4">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>BookBlock: A Content Flip Plugin - Demo 4</title>
+		<meta name="description" content="Bookblock: A Content Flip Plugin - Demo 4" />
+		 <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+
+		<meta name="keywords" content="javascript, jquery, plugin, css3, flip, page, 3d, booklet, book, perspective" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="{% static 'css/default.css'%}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/bookblock.css'%}" />
+		<!-- custom demo style -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/demo4.css'%}" />
+		<script src="{% static 'js/modernizr.custom.js'%}"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="bb-custom-wrapper">
+				
+				<div id="bb-bookblock" class="bb-bookblock">
+					<div class="bb-item" >
+					
+
+						<div class="bb-custom-firstpage" style="background-image: url({% static 'img/bells1.jpg' %});size: cover">
+						
+						</div>
+						<div class="bb-custom-side" id='abd'>
+						<!--	<p>Pastry bear claw oat cake danish croissant jujubes danish. Wypas soufflé muffin. Liquorice powder pastry danish. Candy toffee gummi bears chocolate bar lollipop applicake chocolate cake danish brownie.</p>-->
+					<!--	<p>Pastry bear claw oat cake danish croissant jujubes danish. Wypas soufflé muffin. Liquorice powder pastry danish. Candy toffee gummi bears chocolate bar lollipop applicake chocolate cake danish brownie.</p>-->
+						<p style='margin-top: 0px'align='center'><font size='8'><a href="{% url 'home' %}" style='color: #000066'>Home</a>&nbsp;&nbsp;
+						<a href="{% url 'indexe' %}" style='color: #000066'>Q&A</a>&nbsp;&nbsp;
+						<a href="{% url 'about' %}" style='color: #000066'>About</a>&nbsp;&nbsp;
+						<a href="{% url 'indexm' %}" style='color: #000066'>Mentor</a>&nbsp;&nbsp;
+						<a href="{% url 'homef' %}" style='color: #000066'>Feedback</a>&nbsp;&nbsp;
+						<a href="{% url 'indexp' %}" style='color: #000066'>View Colleges</font></a></p>
+ 
+                     </div>
+		             </div>
+					<div class="bb-item">
+						<div class="bb-custom-side" style="background-image: url({% static 'img/library1.jpg'%});size: cover">
+					<!--		<p>Soufflé tootsie roll jelly beans. Sweet icing croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear claw soufflé.</p>-->
+						</div>
+						<div class="bb-custom-side">
+							<p>It's always better to know all your options. Get all information about every college in India. Explore your options and make the most of them.</p>
+						</div>
+					</div>
+					<div class="bb-item">
+						<div class="bb-custom-side">
+							<p>If you don't have anyone to guide you, then this is the best place. Find yourself a suitable mentor and use his help to solve your 
+								queries.</p>
+						</div>
+						<div class="bb-custom-side" style="background-image: url({% static 'img/school2.jpg'%});size: cover">
+						<!--	<p>Wafer donut caramels chocolate caramels sweet roll. Gummi bears powder candy chocolate cake gummi bears icing wafer cupcake. Brownie cotton candy pastry chocolate wypas.</p>-->
+						</div>
+					</div>
+					<div class="bb-item">
+						<div class="bb-custom-side" style="background-image: url({% static 'img/bay.png'%});size: cover">
+							
+						</div>
+						<div class="bb-custom-side">
+							<p>On our you can raise any doubts you encounter. We would allow experts to answer you 
+								questions in order to eliminate ambiguity.</p>
+						</div>
+					</div>
+					<div class="bb-item">
+						<div class="bb-custom-side">
+							<p>We would also enable you to rate your personal experience. We intend to raise the bar
+								in the field of eeducation by doing so.</p>
+						</div>
+						<div class="bb-custom-side"style="background-image: url({% static 'img/blue1.jpg' %});size: cover">
+						<!--	<p>Chocolate bar tiramisu marzipan. Croissant soufflé croissant lollipop liquorice dragée chupa chups carrot cake. Liquorice lollipop halvah toffee lollipop.</p>-->
+						</div>
+					</div>
+				</div>
+
+				<!--<nav>
+					<a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">First page</a>
+					<a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
+					<a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+					<a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
+				</nav>-->
+				<nav>
+					<a id="bb-nav-first" href="#"><font color="#480000">First page</font></a>
+					<a id="bb-nav-prev" href="#"><font color="#480000">Previous</font></a>
+					<a id="bb-nav-next" href="#"><font color="#480000">Next</font></a>
+					<a id="bb-nav-last" href="#"><font color="#480000">Last page</font></a>
+				</nav>
+
+			</div>
+
+		</div><!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="{% static 'js/jquerypp.custom.js' %}"></script>
+		<script src="{% static 'js/jquery.bookblock.js' %}"></script>
+		<script>
+			var Page = (function() {
+				
+				var config = {
+						$bookBlock : $( '#bb-bookblock' ),
+						$navNext : $( '#bb-nav-next' ),
+						$navPrev : $( '#bb-nav-prev' ),
+						$navFirst : $( '#bb-nav-first' ),
+						$navLast : $( '#bb-nav-last' )
+					},
+					init = function() {
+						config.$bookBlock.bookblock( {
+							speed : 1000,
+							shadowSides : 0.8,
+							shadowFlip : 0.4
+						} );
+						initEvents();
+					},
+					initEvents = function() {
+						
+						var $slides = config.$bookBlock.children();
+
+						// add navigation events
+						config.$navNext.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'next' );
+							return false;
+						} );
+
+						config.$navPrev.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'prev' );
+							return false;
+						} );
+
+						config.$navFirst.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'first' );
+							return false;
+						} );
+
+						config.$navLast.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'last' );
+							return false;
+						} );
+						
+						// add swipe events
+						$slides.on( {
+							'swipeleft' : function( event ) {
+								config.$bookBlock.bookblock( 'next' );
+								return false;
+							},
+							'swiperight' : function( event ) {
+								config.$bookBlock.bookblock( 'prev' );
+								return false;
+							}
+						} );
+
+						// add keyboard events
+						$( document ).keydown( function(e) {
+							var keyCode = e.keyCode || e.which,
+								arrow = {
+									left : 37,
+									up : 38,
+									right : 39,
+									down : 40
+								};
+
+							switch (keyCode) {
+								case arrow.left:
+									config.$bookBlock.bookblock( 'prev' );
+									break;
+								case arrow.right:
+									config.$bookBlock.bookblock( 'next' );
+									break;
+							}
+						} );
+					};
+
+					return { init : init };
+
+			})();
+		</script>
+		<script>
+				Page.init();
+		</script>
+	</body>
+</html>

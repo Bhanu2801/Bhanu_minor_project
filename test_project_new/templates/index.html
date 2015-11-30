@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block abc %}
+<style>
+	#para12{
+
+		text-align: center;
+		margin: 400px 0px 700px 0px;
+	}
+	#para11{
+		margin:400px 100px 0px 100px;
+	}
+	#para10{
+		margin-top: 100px;
+	}
+	
+	
+	</style>
+	<div id="bg">
+		<div class="container14">
+			<ul id="scene">
+				<!-- <li class="layer" data-depth="0.00"><img src="{%static 'img/phoo.jpg'%}"></li>
+				 <li class="layer" data-depth="0.80"><img src="{% static 'img/oo6.png'%}"></li>
+				 <li class="layer" data-depth="0.80"><img src="{% static 'img/oo5.png'%}"></li>
+				 <li class="layer" data-depth="0.80"><img src="{% static 'img/oo4.png'%}"></li>
+				 <li class="layer" data-depth="0.80"><img src="{% static 'img/oo3.png'%}"></li>
+				 <li class="layer" data-depth="0.80"><img src="{% static 'img/oo4.png'%}"></li>-->
+				 
+				 <li class="layer" data-depth="1.2" id="para10"><img src="{% static 'img/uuuu.png'%}"></li>
+  				 <li class="layer" id="para12" data-depth="0.00"><img src="{%static 'img/eee.png'%}" height="620" width="620"></li>
+  				<!-- <li class="layer" data-depth="0.00" id="para11"><img src="{% static 'img/yo1.png'%}" height="700" width="1200"></li>
+            <!--    <li class="layer" id="13" data-depth="0.00"><img src="{%static 'img/bbb.png'%}"></li>-->
+
+			</ul>
+		</div>
+	</div>
+	<script src="{% static 'deploy/parallax.min.js' %}"></script>
+	<script>
+
+	var scene=document.getElementById('scene');
+	var parallax= new Parallax(scene);
+
+	</script>
+
+
+{% endblock %}

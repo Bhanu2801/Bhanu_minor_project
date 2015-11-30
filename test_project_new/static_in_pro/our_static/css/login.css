@@ -1,0 +1,160 @@
+.hd{
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+	background: #EB8360;
+	opacity: 0.5;
+	color: blue;
+	box-shadow: 1px 1px 3px black;
+	text-shadow:2px 2px black;
+	border:1px solid #EB8360;
+	border-radius: 5px;
+}
+.h12{
+	background-image:url({% static 'img/bgcolor1.jpe' %}); 
+
+}
+body{
+	background:#76B4F5;
+	
+}
+.open{
+	clear: both;
+}
+.nv{
+	background:#1A6FC7;
+	opacity: 50%;
+	
+	color: blue;
+	 
+}
+.nv ul li a{
+	color: red;
+	font-style: bold;
+}
+.nv li a{
+	color: red;
+	font-style: bold;
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block; 
+    color: orange;
+}
+#slider {
+    width: 720px;
+    height: 400px;
+    overflow: hidden;
+}
+#slider .slides {
+    display: block;
+    width: 6000px;
+    height: 540px;
+    margin: 0;
+    padding: 0;
+}
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 720px;
+    height: 540px;
+}
+/* helper css, since we don't have images */
+.slide2 {
+    background: blue;
+}
+.slide3 {
+    background: green;
+}
+.slide4 {
+    background: purple;
+}
+.slide5 {
+    background: orange;
+    
+}
+#bx{
+	color:black;
+}
+#bx:hover{
+
+	border-radius: 5px;
+	border:1px solid black;
+	color:red;
+	background: black;
+}
+#sub{
+	clear: both;
+	float:left;
+}
+
+.brt{
+	margin-left:280px;
+
+}
+.pnl{
+	clear: both;
+	margin-top: 38px;
+	float: right;
+	display: inline;
+	height:400px;
+	width:200px;
+	margin-left: 100px;
+}
+.lin{
+	color: black;
+	background:#76B4F5;
+	border:1px solid black;
+}
+.lin  div p a{
+	color:black;
+}
+.lin:hover{
+	text-decoration: none;
+	color: red;
+}
+.lin div p a:hover{
+	text-decoration: none;
+	color: purple;
+}
+.nw{
+	margin-left: 120px;
+	margin-top: 38px;
+	height: 400px;
+	width:496px;
+
+}
+.pan{
+	
+	width: 20%;
+	margin-top: 0px;
+}
+.foot p{
+	clear: both;
+	font-style: bolder;
+}
+.en li a{
+	clear:both;
+	float: right;
+	text-decoration: none;
+	padding:0 20px;
+	color:#333;
+}
+.en li{
+	list-style-type: none;
+	display: inline-block;
+}
+.cr{
+	clear: both;
+	float: left;
+}
+.en li a:hover{
+	color: red;
+}
+.foot{
+	margin-top: 500px;
+	background: #76B4F5;
+}
+.en1{
+	margin-left: 10px;
+}

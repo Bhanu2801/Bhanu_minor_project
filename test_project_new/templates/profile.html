@@ -1,0 +1,240 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>booooyah</title>
+    <link href="{% static 'css/profile1.css' %}" rel="stylesheet" type="text/css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+   </head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<img src="{% static 'img/colored.jpg'%}">
+		</div>
+		<div id="content">
+ 
+   
+  
+    <div class="container-fluid h12">
+      <div class="col-sm-11">
+<h1 class="hd">EduCamp</h1></div></div>
+
+<!--<p class="open">Welcome ------</p>-->
+ <header class="navbar-inverse nv">
+    <div class="container">
+    <nav role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav nv">
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="bx">MBA <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li> <a href="">MBA/PGDM</a></li>
+            <li> <a href="">Executive MBA</a></li>
+            <li> <a href="">Distance MBA</a></li>
+            <li> <a href="">Online MBA</a></li>
+            <li> <a href="">Part-Time MBA</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="bx">Engineering <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li> <a href="">B.E/B.Tech</a></li>
+            <li> <a href="">M.E/M.Tech</a></li>
+            <li> <a href="">Diploma</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="bx">Design <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li> <a href="">Fashion and Textile Design</a></li>
+            <li> <a href="">Product Design</a></li>
+            <li> <a href="">Interaction Design</a></li>
+            <li> <a href="">Interior Design</a></li>
+            <li> <a href="">Jewellery Design</a></li>
+          </ul>
+        </li>
+        <li><a href="#" id="bx">Other Courses <span class="caret"></span></a></li>
+        <li><a href="#" id="bx">Study Abroad <span class="caret"></span></a></li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="bx">Mentor Allotment <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+              <li><a href="{% url 'indexm' %}">View Mentors</a></li>
+              <li><a href="{% url 'homem' %}">Enter as Mentor<!--<span class="caret"></span>--></a>
+                 <!--<ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">Allocate a Mentor</a></li>
+                    <li><a href="#">Chat</a></li>
+                  </ul>
+              </li>-->
+        
+              <li><a href="{% url 'home2m' %}">Enter as Student</a></li>
+
+            </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+         <span> 
+        
+        <button type="signout" class="btn btn-danger brt">Signout</button>
+            
+      </span>
+        <br>
+        <div id="sub">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default ">Submit</button>
+        </div>
+      </form>
+     
+    </div>
+  </div>
+</nav>
+  </div>
+  </header> 
+   
+      <div class="col-sm-6 col-xs-12">
+  <div class="container"><br><br>
+    <div id="slider">
+        <ul class="slides">
+            <li class="slide slide1"><img src="{% static 'img/image1.jpg'%}"></li>
+            <li class="slide slide2"><img src="{% static 'img/image2.jpg'%}"></li>
+            <li class="slide slide3"><img src="{% static 'img/image3.jpg'%}"></li>
+            <li class="slide slide4"><img src="{% static 'img/download3.jpeg'%}"></li>
+            <li class="slide slide5"><img src="{% static 'img/image4.jpg' %}"></li>
+            <li class="slide slide1"><img src="{% static 'img/image1.jpg'%}"></li>
+        </ul>
+    </div>
+</div>
+</div>
+    <div class="col-sm-3 col-xs-6">
+     <div class="panel panel-default nw lin">
+        <div class="panel-heading">News Feed</div>
+        <div class="panel-body">
+          
+           
+          
+           <p> <a href="{% url 'indexm' %}">View Profile</a> </p>
+           <p> <a href="{% url 'homee' %}">Ask Questions</a> </p>
+           <p> <a href="{% url 'home2e' %}">Give Answer</a> </p>
+           <p> <a href="{% url 'indexe' %}">View Questions</a> </p>
+           <p> <a href="{% url 'indexp' %}">View Colleges</a> </p>
+           <p> <a href="{% url 'home2p' %}">Give Rating</a> </p>
+           <p> <a href="{% url 'index2p' %}">View Rating</a> </p>
+          <!-- <p> <a href="{% url 'indexe' %}">View Comments</a> </p>-->
+         
+        </div>
+      </div>
+    </div>
+      <div class="col-sm-3 col-xs-6">
+     <!--<div class="panel panel-default nw">
+        <div class="panel-heading">News Feed</div>
+        <div class="panel-body">
+          <p>Colleges Applied for: <script type="text/javascript">
+            var caf;
+            caf=6;
+            document.write(caf);
+            </script>
+           </p>
+           <p>  <a href="#" class="lin">New Colleges</a></p>
+           <p> <a href="#" class="lin">Apply</a> </p>
+
+        </div>
+      </div>-->
+      </div>
+   
+    <footer class="foot">
+      <div class="cr" style="height: 130px">&copy 2015 Educamp</div>
+      <p style="text-align: center">
+        <font size="4">
+         <a href="{% url 'home' %}" class="en1">Home</a> <br>
+         <a href="{% url 'about' %}">About Us</a> <br>
+         <a href="{% url 'indexe' %}">Contact Us</a> <br>
+         <a href="{% url 'indexm' %}">FAQ</a> <br>
+         <a href="{% url 'indexm' %}">Site Map</a><br>
+       </font>
+      </ul>
+      </p>
+    </footer>
+<script type="text/javascript">
+  
+    'use strict';
+
+$(function () {
+
+    //settings for slider
+    var width = 720;
+    var animationSpeed = 1000;
+    var pause = 3000;
+    var currentSlide = 1;
+
+    //cache DOM elements
+    var $slider = $('#slider');
+    var $slideContainer = $('.slides', $slider);
+    var $slides = $('.slide', $slider);
+
+    var interval;
+    var hd = $('.hd');
+     hd.animate({left: '250px',height:'50px',width:'200px'}, 1500);
+    hd.animate({fontSize: '3em'}, 700);
+
+    function startSlider() {
+        interval = setInterval(function () {
+            $slideContainer.animate({
+                'margin-left': '-=' + width
+            }, animationSpeed, function () {
+                if (++currentSlide === $slides.length) {
+                    currentSlide = 1;
+                    $slideContainer.css('margin-left', 0);
+                }
+            });
+        }, pause);
+    }
+
+    function pauseSlider() {
+        clearInterval(interval);
+    }
+
+    $slideContainer.on('mouseenter', pauseSlider)
+        .on('mouseleave', startSlider);
+
+    startSlider();
+
+
+});
+
+
+
+
+</script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
+		
+		</div>
+		
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+	</html>	

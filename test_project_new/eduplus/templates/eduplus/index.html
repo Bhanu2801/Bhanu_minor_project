@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+<!--{% load crispy_forms_tags %}-->
+{% load staticfiles %}
+
+{% block content %}
+
+{% if latest_question_list %}
+<p style="text-align:center; padding-bottom:50px;padding-top:50px">
+	<img src="{% static 'img/doubts.jpg'%}"><br>
+	<img src="{% static 'img/queries.jpg'%}"><br>
+</p>
+<p><font size="6" color="#000">
+  <!--  <ul>
+    {% for question in latest_question_list %}
+        <li><a href="/eduplus/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>-->
+    {% for question in latest_question_list %}
+        <img src="{% static 'img/Q.jpg'%}" height="60" width="60"><a href="/eduplus/{{ question.id }}/"><font color="#000">{{ question.question_text }}</font></a><br>
+        {% endfor %}
+</font>
+</p>
+{% else %}
+    <p>No eduplus are available.</p>
+{% endif %}
+{% endblock %}

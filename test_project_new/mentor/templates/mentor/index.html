@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+{% if latest_mentor_list %}
+<!--	<ul>
+	{% for mentor in latest_mentor_list %}
+		<li><a href="/mentor/{{mentor.id}}/">
+		<strong><font size="5" color="#000066">Name : </font></strong></strong>{{mentor.mentor_name}}</li></a>
+		<li><strong><font size="5" color="#000066">Email: </font></strong>{{mentor.mentor_email}}</li>
+		<li><strong><font size="5" color="#000066">City : </font></strong>	{{mentor.mentor_city}}</li>
+		<li><strong> <font size="5" color="#000066">Qualification: </font></strong>	{{mentor.mentor_qualification}}</li>
+		<li>{{mentor.mentor_qualification1}}</strong></li>
+		<li>{{mentor.mentor_qualification2}}</li>
+			
+		</li>
+	{% endfor %}
+	</ul>-->
+	<p style="text-align:center; padding-bottom:50px">
+	<img src="{% static 'img/mentors.jpg'%}"><br>
+	<img src="{% static 'img/mentor2.jpg'%}"><br>
+    </p>
+		<div style="margin: auto; padding-left: 720px" >
+	{% for mentor in latest_mentor_list %}
+		<table>
+		<!--<a href="/mentor/{{mentor.id}}/">-->
+		<tr><td><font size="4" color="#480000">Name : </font></td><td><a href="/mentor/{{mentor.id}}/"><font size='4'>{{mentor.mentor_name}}</font></a><td><tr>
+		<tr><td><font size="4" color="#000066">Email: </font></td><td><font size='4'>{{mentor.mentor_email}}</font><td><tr>
+		<tr><td><font size="4" color="#000066">City : </font></td><td><font size='4'>	{{mentor.mentor_city}}</font><td><tr>
+		<tr><td><font size="4" color="#000066">Qualification: </font></td><td><font size='4'>{{mentor.mentor_qualification}}</font><td><tr>
+		<tr><td><font size="4" color="#000066">Qualification2(optional): </font></td><td><font size='4'>{{mentor.mentor_qualification1}}</font><td><tr>
+		<tr><td><font size="4" color="#000066">Qualification3(optional): </font></td><td><font size='4'>{{mentor.mentor_qualification2}}</font><td><tr>
+
+
+		<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size='4'>{{mentor.mentor_qualification1}}</font>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size='4'>{{mentor.mentor_qualification2}}</font>-->
+		
+		</div>
+		<hr>
+	{% endfor %}
+	<p>
+{% else %}
+	<p>No data found</p>
+{% endif %}
+{% endblock %}

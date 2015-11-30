@@ -1,0 +1,6 @@
+<h1>{{ mentor.mentor_name }}</h1>
+<ul>
+{% for student in mentor.student_set.all %}
+    <li>{{ student.student_name }}</li>
+{% endfor %}
+</ul>

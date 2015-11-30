@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<hr>
+<p style="text-align:center;padding-top:50px"><img src="{% static 'img/details.jpg'%}"></p>
+<p style="padding-left: 830px;padding-top:40px" ><font size="6" color="#480000">{{college.college_text}}</font></p>
+<p style="padding-left: 830px"><font size="6" color="#000066">Rating:</font><font size="6"> {{avg}}</font></p>
+
+<p style="padding-left: 830px"><font size="6" color="#000066">Comments</font></p>
+{% for rating in college.rating_set.all %}
+<p style="padding-left: 830px"><font size="6">	{{rating.views}}</p>
+	
+{% endfor %}
+
+<hr>
+{% endblock %}
+

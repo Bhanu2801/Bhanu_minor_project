@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+
+{% block raiser %}
+
+EduCamp|
+
+<!--{% endblock %}
+<style>
+{% block style %}
+.abc{
+  background-image: url({% static 'img/college.png' %});
+}
+
+{% endblock %}
+</style>-->
+
+{% block jumbotron2 %}
+
+ <!--<div class='abc'> 
+ <img src="{% static 'img\education1.jpg' %}" style="width:100%;height:600px;margin-left:0px;">
+ </div>-->      
+      
+
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+{{block.super}}
+<div class="row">
+	<div class="col-sm-6 col-md-4 pull-right">      
+		<h1>{{ template_title }}</h1>
+		<form method='POST' action=''>{% csrf_token %}
+		{{ form|crispy }}
+		<input class ='btn btn-primary' type="submit" value="sign up">
+	</div>
+</div>
+
+<!--<div class='col-sm-2 col-offset-2'>
+  <p class='lead text-align-center'>Stay smart<br/>
+  <i class="fa fa-binoculars fa-5x"></i></p>
+</div>
+<div class='col-sm-2'>
+  <p class='lead text-align-center'>Think new<br/>
+  <i class="fa fa-binoculars fa-5x"></i></p>
+</div>
+<div class='col-sm-2'>
+  <p class='lead text-align-center'>Think new<br/>
+  <i class="fa fa-binoculars fa-5x"></i></p>
+</div>
+<div class='col-sm-2 '>
+  <p class='lead text-align-center'>Think different<br/>
+  <i class="fa fa-filter fa-5x fa-pull-center"></i></p>
+
+</div>
+<div class='col-sm-2'>
+  <p class='lead text-align-center'>Get the best<br/>
+  <i class="fa fa-thumbs-o-up fa-5x"></i></p>
+
+</div>
+<div class='col-sm-2'>
+  <p class='lead text-align-center'>Get the best<br/>
+  <i class="fa fa-thumbs-o-up fa-5x"></i></p>
+
+</div>-->
+
+</form>
+{% endblock %}
+<!--we also have col-xs-size. all these tags are related to bootstrap and make the window fits in the screen-->
