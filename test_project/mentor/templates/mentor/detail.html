@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<h1>{{ mentor.mentor_name }}</h1>
+<h1>{{ mentor.mentor_email }}</h1>
+<h1>{{ mentor.mentor_city }}</h1>
+<h1>{{ mentor.mentor_qualification }}</h1>
+<h1>{{ mentor.mentor_qualification1 }}</h1>
+<h1>{{ mentor.mentor_qualification2 }}</h1>
+{% if user.is_authenticated %}
+<div class="row">
+<div class="col-sm-6 col-md-4 pull-center">
+<h1>{{title}}</h1>
+<form method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
+{{form|crispy}}
+<input class ='btn btn-primary' type="submit" value="submit">
+</div>
+</div>
+</form>
+<ul>
+{% for student in mentor.student_set.all %}
+    <li>{{ student.student_name }}</li>
+{% endfor %}
+</ul>
+{% else %}
+login to submit an answer
+{% endif %}
+{% endblock %}

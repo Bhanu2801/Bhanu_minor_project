@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+<!--{% load staticfiles %}-->
+{% block content %}
+
+
+<html>
+<body>
+<pre>
+{{institute.about}}
+</pre>
+<pre>
+{{institute.courses}}
+</pre>
+<div class="row">
+	<div class="col-sm-6 col-md-4 pull-center">
+<h1>{{title}}</h1>
+<form method="POST" action="">{% csrf_token %}
+{{form|crispy}}
+<input class ='btn btn-primary' type="submit" value="submit">
+	</div>
+</div>
+</form>
+</body>
+</html>
+
+{% endblock %}
